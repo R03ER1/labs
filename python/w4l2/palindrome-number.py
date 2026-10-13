@@ -7,8 +7,11 @@ palindrome = True
 
 i = 0
 while i < length // 2:
-    if (n % (10 ** i + 1)) // (10 ** (i)) != ((n // (10 ** (length - i))) % 10):
-        palindrome == False
+    i_end = (n % 10 ** (i + 1)) // (10 ** i)
+    i_start = (n // (10 ** (length - i - 1))) % 10
+    if i_end != i_start:
+        palindrome = False
+    i += 1
 
 if not palindrome:
     print("no")
