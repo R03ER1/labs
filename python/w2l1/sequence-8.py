@@ -1,3 +1,8 @@
 #!/usr/bin/env python3
 
-x = -x + (((x % 2) * 2) - 1)
+if (x < 0):
+    x -= 1
+    x*= -1
+else:
+    x += 1
+    x *= -1
